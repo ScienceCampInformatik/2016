@@ -1,5 +1,5 @@
-# Science Camp 2016
-git Repository des Science Camp 2016 am KIT.
+# Science Camp Informatik 2016
+git Repository des Science Camp Informatik 2016 am KIT.
 
 Hier findest du 
 * die Aufgabenbeschreibung in dem Unterordner *workshop_aufgaben*

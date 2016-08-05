@@ -7,13 +7,15 @@
     * Ersteinmal brauchst du Einträge für die Geburtstage die du angezeigt bekommen möchtest. Such dir min 2 Leute die im August Geburtstag haben und Bilder von ihnen.
     * Jetzt kommt das ganze in ein Array. Pro Person willst du aber mehrere Sachen Speichern deswegen benutzt du als Arrayelemente Objekte. Ein solches Objekt sieht dann so aus:
 
-        ```
-        { name: Max Mustermann,
-            month: 8,
-    		 date: 1.8.2000,
-    		 src: “irgendein Bild”
-        }
-        ```
+```	
+		 {    
+				name: Max Mustermann,
+		     	month: 8,
+		    	date: 1.8.2000,
+		    	src: “irgendein Bild”
+		  }
+```
+   
 
 3. Javascript aktuelles Datum:
     * Du brauchst eine neue Variable in der du das aktuelle Datum speicherst. das aktuelle Datum bekommst du über den Aufruf “new Date()”.
@@ -29,6 +31,6 @@
     * Als nächstes fügst du statt deinem Bild, name und datum die Elemente aus dem Array ein. auf diese greifst du genauso zu wie auf dem Monat aus dem Array.
 6. Jetzt probiere das ganze aus.
 
-**Falls du nicht weiterkommst, kannst du uns gerne fragen oder auf der Demoseite von sciencecampinformatik.github.io/2015 nachschauen.**
+**Falls du nicht weiterkommst, kannst du uns gerne fragen oder auf der Demoseite von sciencecampinformatik.github.io/2016 nachschauen.**
 
 

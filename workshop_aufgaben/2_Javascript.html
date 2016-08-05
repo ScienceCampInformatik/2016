@@ -1,0 +1,183 @@
+<!Doctype html>
+<html>
+<head>
+    <title>
+    Javascript
+    </title>
+    <link rel="stylesheet" type="text/css" href="style/style_template.css"/>
+        <link rel="stylesheet" href="js/highlight/styles/tomorrow.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <meta charset="utf-8">
+
+    <!-- Bildergallerie -->
+    <script src="js/bilder.js"></script>
+    <script src="js/name.js"></script>
+
+    <!-- LeafletJS -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li class="tag"><a href="1-1_HTML.html">Tag 1</a></li>
+            <li class="tag current"><a>Tag 2</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>
+          Javascript
+        </h1>
+        <p>
+   			<h2>Was ist Javascript &uuml;berhaupt? </h2>
+	   			<p>
+				   Javascript ist wie der Name schon sagt eine Skriptspache, das hei&szlig;t in  etwa eine Sprache die f&uuml;r kurze kleine
+				   Programme gedacht ist. Javascript ist insbesondere dafür gedacht in Browsern eingesetzt zu werden,
+				   um Benutzerinteraktionen auszuwerten, Inhalte zu verändern, nachzuladen oder zu generieren und so die
+				   Möglichkeiten von HTML und CSS zu erweitern. Kurz gesagt um Internetseiten interaktiver zu machen.
+				</p>
+
+		    	<p> Javascript-Dateien enden mit dem Dateiformat <code class="inline_code">.js</code>. </p>
+
+
+
+            <h2>Was ist wichtig?</h2>
+            	<h3> Wie binde ich meine Javascript-Datei in mein HTML ein? </h3>
+            	<p> Du schreibst oben in die head tags den Pfad zu deiner Javascript-Datei als source in script tags.
+            	 Das sieht dann zum Beispiel so aus:</p>
+
+
+
+            	 <pre><code class="html" >
+&lt;script src="js/bilder.js"&gt;&lt;/script&gt;
+            	 </code></pre>
+
+            	<h3> Variablen: </h3>
+            	<p>
+            	Variablen sind sowas wie Beh&auml;lter f&uuml;r Werte, zum Beispiel f&uuml;r Zahlen oder W&ouml;rter.
+            	Durch das Schl&uuml;sselwort <code> var </code> legt man die folgende Zeichenkette als Variable fest.
+            	Zum Beispiel wenn man das Wort "zahl" als Variable haben möchte sieht das so aus:
+            	<pre><code class="js"> var zahl;</code></pre>
+            	</p>
+
+            	<p id="demo">Mein Name ist:</p>
+
+            	<button onclick="show()">Show name </button>
+
+            	<p>
+            	Variablen kann man natürlich auch Werte zuweisen, das funktioniert mit dem <code> = </code> Operator. Der Term: </p>
+            	<pre><code class="js" >
+var zahl = 7;
+            	 </code></pre>
+
+            	<p>bedeutet also,
+            	 dass zahl eine Variable mit dem Wert 7 ist. Werte von Variablen sind aber im Allgemeinen nicht endg&uuml;ltig man
+            	 lann also <code> zahl </code> in der n&auml;chsten Zeile auch den Wert 8 zuweisen, mit dem Ausdruck:
+            	             	<pre><code class="js" >
+zahl = 8;
+            	 </code></pre>
+            	 Beachtet, dass man hier das Schlüsselwort <code> var </code> nicht mehr braucht.
+            	 </p>
+
+            	 <button onclick="change()">Change name </button>
+
+            	<h3> If-Abfragen </h3>
+            	<p>
+            	 If-Abfragen f&uuml;hren einen Teil Code aus falls eine Bedingung zutrifft.
+            	             	<pre><code class="js">if(zahl>7){...}</code></pre>
+            	 f&uuml;hrt also den Code in den Klammern genau dann aus, wenn die Variable number gr&ouml;&szlig;er als 7 ist.
+            	 </p>
+            	 <p>
+            	 If-Abfragen lassen sich auch mit einem Else- Block verbinden. Dieser Else Block wird dann ausgef&uuml;hrt, wenn die Bedingung
+            	 bei der If-Abfrage nicht erf&uuml;llt wurde. Zum Beipiel:
+            	 <pre><code class="js">if(zahl>7){...}else{...}</code></pre>
+
+            	 </p>
+            	 <button onclick="kitty(); return false;">Magst du Katzen?</button>
+            	 <img  id=cat src=http://bit.ly/1OVjZrb style="height:400px;">
+
+            	 <h3>Schleifen </h3>
+            	 <p>
+            	 Schleifen benutzt man dann, wenn man ein St&uuml;ck Code mehrmals ausf&uuml;hren m&ouml;chte. Es gibt verschiede Arten von Schleifen
+            	 aber f&uuml;r die meisten F&auml;lle reicht eine for-Schleife. Die Schleife hat eine Laufvariable, die meistens
+            	 <stron> i </code> genannt wird. In jedem Schleifendurchlauf wird i erh&ouml;ht, erreicht i einen bestimmten Wert bricht
+            	 die Schleife ab und der Code der hinter der Schleife steht wird ausgef&uuml;hrt.  Die Syntax f&uuml;r eine solche for-Schleifen,
+            	 die abbricht wenn i=10 ist, ist:
+            	 </p>
+            	 <p>
+            	 <pre><code class="js">for(var i = 0; i<10; i++){...}</code></pre>
+            	  </p>
+
+
+            	  <button onclick = "calc();return false;"> Summe von 1 bis 100? </button>
+            	  <p> Das Ergebnis ist: </p>
+            	  <p id=sum> </p>
+
+
+
+            	 <h3> Funktionen </h3>
+            	 <p>
+            	 Funktionen sind Codeabschnitte, das wesentliche an ihnen ist, dass man ihnen Parameter &uuml;bergeben kann und sie ein Ergebnis
+            	 zur&uuml;ckgeben k&ouml;nnen. Eine einfache Funktion w&auml;re zum Beispiel: </p>
+            	 <pre><code class="js">function add(num1, num2){
+    return num1 + num2;
+}</code></pre>
+            	 Diese Funktion add &uuml;bernimmt zwei Variablen num1 und num2 als &uuml;bergabeparameter und gibt ihre Summe zur&uuml;ck.
+
+            	<h3> Funktionsaufrufe </h3>
+
+				<p> Die Funktionen die wir gerade kennengelernt haben muss man auch aufrufen.
+				Zum einen kann man natürlich Funktionen direkt im Javascript aufrufen. Dazu schreibt man einfach den Funktionsnamen und in
+				Klammern dahinter die Parameter, die man übergeben möchte. Aber Achtung die Reihenfolge der Parameter ist wichtig und immer
+				so, wie man sie in der Methodendefinition geschrieben hat. Ein solcher Aufruf würde dann so aussehen:</p>
+				<pre><code class="js">add(7,9);</code></pre>
+				<p>Hier würde 7 also in num1 und 9 in num2 gespeichert werden.</p>
+
+				<p>
+				Man kann Javascript Funktionen auch im HTML-Code aufrufen,
+				meistens tut man das mit sogenannten Events. Hat man einen Button designed und m&ouml;chte
+				man das beim klicken auf diesen Button die Funktion
+				<code>add()</code> aufgerufen wird, so sieht der zugeh&ouml;rige Code wie Folgt aus:
+				</p>
+				<pre><code class="html">&lt;div onclick=&quot;add(7,9)&quot;&gt;Addiere 7 und 9!&lt;/div&gt;</code></pre>
+				<p>Hier verwendet man das onclick-Event, dieses findet immer dann statt wenn auf das zugehörige HTML-Element geklickt wurde.</p>
+				<p>Möchte man dass eine Funktion direkt beim laden der Seite aufgerufen wird, so kann man sie auch in script tags an die
+				gewünschte Stelle schreiben. Zum Beispiel so: </p>
+				<pre><code class="html">&lt;script&gt;add(7,9);&lt;/script&gt;</code></pre>
+				<p>Diese script tags geben an das zwischen ihnen Javascript-Code steht. Man könnte also auch den Code der Funktion,
+				 die man aufrufen möchte zwischen die tags schreiben. Aber das wird sehr schnell unübersichtlich und macht es schwer Funktionen
+				 wiederzuverwenden.</p>
+
+				<h3> Arrays </h3>
+				<p>
+				Arrays sind eine Art Tabelle in der viele Daten  liegen, also zum Beipiel viele Zahlen oder W&ouml;rter.
+				Anlegen lassen sich Arrays &auml;hnlich zu anderen Variablen:
+				</p>
+				<pre><code class="js">var zahlen = [7,2,4,5];</code></pre>
+				<p> Hier wird ein Array mit 4 Zahlen angelegt.
+				 Solange man die einzelnen Elemente im Array nicht ver&auml;ndert bleiben sie und ihre Reihenfolge gleich.
+				Auf ein Element innerhalb eines Arrays l&auml;sst sicht wie folgt zugreifen: </p>
+				<pre><code class="js">zahlen[0] = 1;</code></pre>
+				Dieser Ausdruck setzt den ersten Eintrag des Arrays <code>zahlen</code> auf 1. Es sieht nun also so aus:
+				<code>[1,2,4,5]</code>. Dabei muss man beachten, dass man bei Arrays mit 0 anf&auml;ngt zu z&auml;hlen,
+				das erste Element hat also den Index 0.</p>
+				<p> Man kann auch die L&auml;nge eines Arrays mit folgendem Befehl abfragen:</p>
+				<pre><code class="js">var laenge = zahlen.length;</code></pre>
+				<p>Dieser Befehl w&uuml;rde in unserem Beispiel ist in der Variablen <code>laenge</code> also 4 gespeichert,
+				 da vier Elemente im Array liegen.</p>
+
+				<button onclick=getelem()> Arrayelemente </button>
+				<p id=elem> </p>
+        <h3>
+            Erste App: Bildergalerie
+        </h3>
+        <p>
+            <a href="#" onclick="next(); return false">Next</a>
+            <a href="#" onclick="previous(); return false;">Back</a>
+        </p>
+        <img id="gallery" src="https://farm8.staticflickr.com/7140/7065590393_b38f545ab3_c.jpg" style="width:700px;">
+
+    </div>
+</body>
+</html>

@@ -18,7 +18,7 @@
     
         ```
         function zeitanzeigen(){
-
+	...
         }
         ```
     * Lege eine neue Variable an und speichere die aktuelle Zeit darin:
@@ -64,8 +64,8 @@
     * Wenn du Lust dazu hast kannst du deine Uhr auch hübscher aussehen lassen indem du in deiner CSS-Datei ein Feld #uhr hinzufügst und reinschreibst was du möchtest:
 
         ```
-        #uhr{
-	
+        	#uhr{
+	...
 	     }
 	     ```
 

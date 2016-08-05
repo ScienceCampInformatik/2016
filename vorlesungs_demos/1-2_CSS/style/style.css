@@ -1,0 +1,35 @@
+body {
+    background-image: url(../../bilder/subtlepatterns/sativa.png);
+
+    color: #111111;
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+h1 {
+    font-family: Arial;
+    text-align: center;
+    font-size: 4em;
+}
+
+.inhalt {
+    background: white;
+    width: 800px;
+    margin: 0 auto;
+    padding: 40px 30px 60px 30px;
+}
+
+.menu {
+    background: #111111;
+    color: #dddddd;
+}
+
+.menu ul {
+    display: inline-block;
+    list-style:none;
+}
+
+.menu ul li {
+    float: left;
+    padding: 8px 25px;
+}

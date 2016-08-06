@@ -4,7 +4,7 @@ var entries = [
       name: "Erwin Schrödinger",
       month: 8,
       date: "12.8.1887",
-      src: "http://pix.echtlustig.com/1212/schroedingers-katze-ist-am-leben-und-sehr-wuetend.jpg"
+      src: "https://www.burks.de/burksblog/pix/2015/06/160615_3.jpg"
     },
     {
       name: "Alfred Hitchcock",

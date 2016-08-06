@@ -1,31 +1,68 @@
 # Aufgabe: Kartenapp mit LeafletJS
 
-Heute lernst du, wie man Code, den andere bereits mal geschrieben haben, für deine eigene Webseite verwenden und benutzen kannst. Solche Programme, die du für deine Entwicklung nutzen kannst, heißen _Library_ oder _Framework_. Wir schauen uns heute [leafletjs.com](http://leafletjs.com) an um eine Webseite zu entwickeln. 
+Heute lernst du, wie man Code, den andere bereits mal geschrieben haben, für deine eigene Webseite verwenden und benutzen kannst. Solche Programme, die du für deine Entwicklung nutzen kannst, heißen _Library_ (_Bibliothek_) oder _Framework_ . Wir schauen uns heute [leafletjs.com](http://leafletjs.com) an um eine Webseite zu entwickeln. 
 
-**Geh zuerst auf http://sciencecampinformatik.github.io/2015/ und schaut euch die Demo-Seite an, wie es aussehen soll.**
+**Geh zuerst auf http://sciencecampinformatik.github.io/2016/ und schau dir auf der Map-Demo-Seite an, wie es aussehen soll.**
 
-**Lade auf http://sciencecampinformatik.github.io/2015/ das Template herunter mit dem wir arbeiten werden.**
+Fremden Code zu benutzen ist meistens am Anfang sehr verwirrend. Dafür ist es umso großartiger, wenn es dann funktioniert und man plötzlich tolle, neue Funktionen hat.
+Wie immer: Wenn Du irgendwo Probleme hast und nicht weiterkommst, frag uns einfach.
 
 ## Erste Erfahrungen mit Leaflet JS
-Leaflet ist ein sogennantes Open Source Projekt. Open Source Projekte sind Projekte, deren Code öffentlich ist und jeder, der will, mitarbeiten kann. In dieser Hinsicht ist es ein wenig wie Wikipedia, wo jeder der möchte, Beiträge schreiben kann.
+Leaflet ist ein sogennantes Open Source Projekt. Open Source Projekte sind Projekte, deren Code öffentlich ist und bei denen jeder, der will, mitarbeiten kann. In dieser Hinsicht ist es ein wenig wie Wikipedia, wo jeder der möchte Beiträge schreiben kann.
 
-Leaflet bietet uns die Möglichkeit, mit JavaScript ganz einfach eine Karte in unsere Webseite einzubauen. Um Leaflet zu benutzen müssen wir erstmal Leaflet in unsere Webseite einbauen. Nutze dafür das Template `map.html`.
+Bevor Du Leaflet in deiner Website benutzen kannst musst du den Leaflet-Code in deiner Website einbinden. Sonst weiß der Browser nicht, wo er den Code findet.
 
 **Binde Leaflet in deine Webseite ein**
 
-1. Besuche leafletjs.com. Im [Quick Start Guide](http://leafletjs.com/examples/quick-start.html) gibt es einen Abschnitt, der heißt _Preparing your page_. 
-2. Folge den Anweisungen unter _Preparing your page_. Falls du Hilfe mit der englischen Sprache brauchst, wende dich einfach an uns.
-3. Wir wollen, dass die Karte bei uns nicht nur 180px hoch ist, sondern die komplette Seite einnimmt. Ändere das.
+1. Die Dateien, die den Leaflet-Code enthalten befinden sich schon auf dem USB-Stick, den Du von uns bekommen hast. Du findest sie unter `bibliothek/leaflet`
+2. In diesem Ordner findest Du die Datei `leaflet.js`, die enthält allen Javascript Code von Leaflet.
+3. Außerdem gibt es ein Stylesheet `leaflet.css`, das für die Leaflet-Elemente ein Aussehen definiert.
+4. Die Datei `leaflet-src.js` brauchst Du nicht. (Sie enthält den selben Code wie `leaflet.js`, ist allerdings nicht komprimiert und daher noch lesbar)
+5. Jetzt bist Du bereit Leaflet in den Header deiner Website einzubinden. Du brauchst den Javascript-Code und das CSS-Stylesheet. Das Einbinden der beiden Dateien funktioniert genau so, wie Du auch schon deine eigenen Javascript- und CSS-Dateien eingebunden hast: (es können beliebig viele Javascript- und CSS-Dateien in eine Website eingebunden werden)
+```
+<header>
+  ...
+  <!-- Binde den Leaflet-Javascript-Code ein -->
+  <script src="bibliothek/leaflet/leaflet.js"/>
+  <!-- Binde das Leaflet-Stylesheet ein -->
+  <link rel="stylesheet" type="text/css" href="bibliothek/leaflet/leaflet.css"/>
+  ...
+</header>
+```
 
-Leaflet ist jetzt korrekt eingebunden und kann benutzt werden! Auf der [Startseite von leafletjs.com](http://leafletjs.com/) ist ein Beispiel Code gegeben. Dieser Code ist JavaScript.
+Leaflet sollte jetzt korrekt eingebunden sein und kann benutzt werden!
+
+Jetzt brauchst Du zuerst einen Bereich auf deiner Website, in der die Karte angezeigt werden soll. Erstelle dazu in deiner HTML-Datei ein neues `div`-Element und gebe ihm die id "map":
+```
+<body>
+  ...
+  <div id="map">
+  </div>
+  ...
+</body>
+```
+In diesem Bereich wird später die Karte auftauchen!
+
+Da der eingebundene Javascript-Code von Leaflet von sich aus überhaupt nichts tut, brauchst Du noch ein bisschen eigenen Javascript-Code.
+Auf der [Startseite von leafletjs.com](http://leafletjs.com/) ist ein Beispiel Code gegeben.
 
 **Probiere den Beispiel Code aus**
 
-1. Erstelle eine Datei namens `map.js`.
-2. Binde `map.js` in deiner Webseite ein.
-3. Schreibe den Beispielcode in `map.js`
+1. Erstelle eine Datei namens `map.js`, am besten im Unterordner `js`.
+2. Schreibe den Beispielcode in `map.js`.
+3. Binde `map.js` in deine Website hinter dem Karten-`div` Element ein:
+```
+<body>
+  ...
+  <div id="map">
+  </div>
+  <script src="js/map.js"/>
+  ...
+</body>
+```
 
-Jetzt hast du LeafletJS erfolgreich benutzt! Wir wollen die Karte ein wenig anpassen.
+Jetzt sollte Deine Website eine Karte anzeigen!
+Wenn das soweit funktioniert, wollen die Karte ein wenig anpassen.
 
 **Verändere den Code so, dass die Karte Karlsruhe anzeigt.**
 
@@ -58,14 +95,13 @@ _Tipp: Schreibe die Koordinaten nicht direkt in den Marker rein, sondern definie
 
 ## Navigationsangaben
 
-Nun wollen wir auch die Route zwischen zwei Orten berechnen. Leaflet selbst bietet nicht die Möglichkeit, Routen zu berechnen. Daher benutzen wir wieder eine andere Library. Sie nennt sich _Leaflet Routing Machine_. Der Code der Library befindet sich bereits in eurem Template.
+Nun wollen wir auch die Route zwischen zwei Orten berechnen. Leaflet selbst bietet nicht die Möglichkeit, Routen zu berechnen. Daher benutzen wir wieder eine andere Library. Sie nennt sich _Leaflet Routing Machine_. Der Code der Library befindet sich ebenfalls bereits auf eurem USB-Stick unter `bibliothek/leaflet-routing-machine.
 
 **Binde Leaflet Routing Machine ein.**
 
 1. Gehe auf die Webseite http://www.liedman.net/leaflet-routing-machine/
 2. Suche den Abschnitt _Getting Started_ und binde die Library entsprechend ein
     * Im Beispiel auf der Webseite wird zusätzlich zu Leaflet Routing Machine auf Leaflet eingebunden - da wir Leaflet bereits eingebunden haben, brauchen wir nur 2 der 4 Codezeilen. Welche sind das?
-    * Im Beispiel wird die Datei `leaflet-routing-machine.js` eingebunden. Diese befindet sich bei uns allerdings im Unterordner `js/leaflet-routing-machine-2.3.0`. Passe den Code entsprechend an.
 3. Teste Leaflet Routing Machine, indem du den Beispielcode kopierst und bei dir im JavaScript-Code einfügst.
 4. Ändere den Beispielcode, sodass eine Route zwischen Markern berechnet wird, die du bereits gesetzt hast.
 

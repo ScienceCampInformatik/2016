@@ -4,7 +4,7 @@ var entries = [
       name: "Erwin Schrödinger",
       month: 8,
       date: "12.8.1887",
-      src: "https://www.burks.de/burksblog/pix/2015/06/160615_3.jpg"
+      src: "http://www.giga.de/wp-content/uploads/2015/02/shutterstock_88983730-rcm992x0.jpg"
     },
     {
       name: "Alfred Hitchcock",

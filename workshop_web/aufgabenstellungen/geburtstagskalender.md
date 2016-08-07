@@ -29,8 +29,6 @@
     * Jetzt musst du alle Informationen die du aus deinem Array bekommst makieren und dein HTML davor und dahinter auseinander ziehen und dort ein Plus einfügen zB so: `<p> + name + + datum +</p>`
     * Als nächstes fügst du vor und hinter alle zusammenhängenden HTML Stücke Anführungszeichen ein. Also sähe unser Beispiel so aus: `“<p>”+ name + ” “ + datum + “</p>”`
     * Als nächstes fügst du statt deinem Bild, name und datum die Elemente aus dem Array ein. auf diese greifst du genauso zu wie auf dem Monat aus dem Array.
-6. Jetzt probiere das ganze aus.
-
 **Falls du nicht weiterkommst, kannst du uns gerne fragen oder auf der Demoseite von sciencecampinformatik.github.io/2016 nachschauen.**
 
 

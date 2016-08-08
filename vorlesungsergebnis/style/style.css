@@ -1,0 +1,44 @@
+body {
+  /* 
+   * Füge Hintergrundbild ein
+   */
+  background-image: url(../bilder/subtlepatterns/swirl_pattern.png);
+  font-size: 14px;
+}
+
+.inhalt {
+  background: #AEA8D3;
+  width: 800px;
+  font-family: "Times New Roman";
+  margin: 0 auto;
+  /*
+   * Füge Padding hinzu: padding: OBEN RECHTS UNTEN LINKS
+   */
+  padding: 40px 30px 20px 20px;
+  margin: 0px 0px 20px 0px;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #ffffff;
+  opacity: 0.7;
+  background: #111111;
+  text-align: center;
+}
+
+.menu a {
+  color: #ffffff;
+}
+
+.menu ul {
+  display: inline-block;
+  list-style: none;
+}
+
+.menu ul li {
+  float: left;
+  padding: 8px 25px;
+}

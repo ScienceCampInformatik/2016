@@ -5,7 +5,7 @@
     * Verlinke diese als skript im head deiner HTML-Seite
         
         ```
-        <script src=”...”> </src>
+        <script src=”...”> </script>
         ```
 2. HTML: 
     * Füge ein DIV mit der id “uhr” ein:

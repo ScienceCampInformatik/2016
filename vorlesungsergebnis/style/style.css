@@ -4,18 +4,21 @@ body {
    */
   background-image: url(../bilder/subtlepatterns/swirl_pattern.png);
   font-size: 14px;
+  cursor: url("../bilder/giphy/strtail.gif"), crosshair;
 }
 
+
+
 .inhalt {
-  background: #AEA8D3;
+  background: #cccccc;
   width: 800px;
   font-family: "Times New Roman";
-  margin: 0 auto;
   /*
    * Füge Padding hinzu: padding: OBEN RECHTS UNTEN LINKS
    */
-  padding: 40px 30px 20px 20px;
-  margin: 0px 0px 20px 0px;
+  padding: 40px 30px 100px 30px;
+  margin: 0px auto;
+
 }
 
 .menu {
@@ -31,7 +34,15 @@ body {
 
 .menu a {
   color: #ffffff;
+  padding: 8px 30px;
 }
+
+.menu a:hover {
+	color: #90C695;
+	background: #333333;
+}
+
+
 
 .menu ul {
   display: inline-block;
@@ -40,5 +51,8 @@ body {
 
 .menu ul li {
   float: left;
-  padding: 8px 25px;
+  padding: 0px;
+  margin: 0px;
 }
+
+

@@ -20,7 +20,7 @@ ZML
 2. JavaScript (Jessica & Sabrina)
 3. Cyberforum (Hannah & Jana)
 4. FZI (Emily, Lara & Alina)
-3. DM (Anna & Johanna)
+3. DM (Anja & Johanna)
 
 
 
